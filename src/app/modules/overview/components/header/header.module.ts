@@ -1,21 +1,18 @@
 import { NgModule } from "@angular/core";
-import { OverviewComponent } from "./overview.component";
+import { HeaderComponent } from "./header.component";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
-import { HeaderModule } from "./components/header/header.module";
 
 @NgModule({
     declarations: [
-        OverviewComponent,
+        HeaderComponent,
     ],
     imports: [
         CommonModule,
         FormsModule,
-        // Components
-        HeaderModule,
     ],
     exports: [
-        OverviewComponent,
+        HeaderComponent,
     ],
 })
-export class OverviewModule {}
+export class HeaderModule {}

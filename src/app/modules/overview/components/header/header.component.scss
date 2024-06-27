@@ -1,0 +1,62 @@
+@import '@styles/global.scss';
+@import '@styles/variables.scss';
+
+.header {
+    width: 100%;
+    height: 80px;
+    padding: 0px 5%;
+}
+
+.header-container {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid $colorDark4;
+    gap: 20px;
+}
+
+.header-brand {
+    width: auto;
+    height: 100%;
+
+    .header-brand__title {
+        background-image: linear-gradient(90deg, $secondaryColor 0%, $primaryColor 100%);
+        background-clip: text;
+        font-size: $titleShort;
+        color: transparent;
+        text-wrap: nowrap;
+    }
+}
+
+.header-actions {
+    width: auto;
+    height: 100%;
+    gap: 10px;
+
+    .header-action {
+        padding: 0px 10px;
+        cursor: pointer;
+
+        &:hover {
+            .header-action__link {
+                color: $colorWhite;
+                text-shadow: 
+                0 0 10px rgba(255, 255, 255, 0.5), 
+                0 0 20px rgba(255, 255, 255, 0.5), 
+                0 0 30px rgba(255, 255, 255, 0.5), 
+                0 0 40px $primaryColor, 
+                0 0 70px $primaryColor, 
+                0 0 80px $primaryColor, 
+                0 0 100px $primaryColor;
+            }
+        }
+
+        .header-action__link {
+            font-weight: 500;
+            font-size: $paragraphMedium;
+            color: $colorGrey1;
+            text-wrap: nowrap;
+            transition: $transitionMedium;
+        }
+    }
+}
