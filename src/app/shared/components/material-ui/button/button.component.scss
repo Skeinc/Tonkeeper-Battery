@@ -1,2 +1,88 @@
 @import '@styles/global.scss';
 @import '@styles/variables.scss';
+
+.component {
+    width: 100%;
+    position: relative;
+}
+
+.button {
+    width: 100%;
+    height: 40px;
+    appearance: none;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 0px 20px;
+    overflow: hidden;
+    gap: 6px;
+    cursor: pointer;
+    transition: $transitionMedium;
+
+    &:hover:not(:disabled) {
+        gap: 10px;
+        background-color: $colorDark3;
+        border-radius: 16px;
+    }
+
+    &:disabled {
+        cursor: default;
+        border-radius: 20px;
+    }
+
+    &:active,
+    &:focus {
+        border-radius: 16px;
+    }
+
+    .button-icon {
+        width: 24px;
+        height: 24px;
+        background-size: cover;
+        transition: $transitionMedium;
+    }
+
+    span {
+        width: auto;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: auto;
+        color: $colorWhite;
+        text-align: center;
+        text-wrap: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+};
+
+.button-primary {
+    background: linear-gradient(90deg, $secondaryColor 0%, $primaryColor 100%);
+
+    span {
+        font-weight: 600;
+        font-size: $paragraphMedium;
+        color: $colorDark4;
+    }
+}
+
+.button-secondary {
+    border: 2px solid $primaryColor;
+    background: linear-gradient(90deg, rgba(25, 249, 195, 0.3) 0%, rgba(41, 217, 59, 0.3) 100%);
+
+    span {
+        font-weight: 500;
+        font-size: $paragraphBig;
+        color: $colorWhite;
+    }
+}
+
+.button-alternative {
+    border: 2px solid $primaryColor;
+    background-color: transparent;
+
+    span {
+        font-weight: 500;
+        font-size: $paragraphSmall;
+        color: $primaryColor;
+    }
+}

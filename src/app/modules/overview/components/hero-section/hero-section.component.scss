@@ -1,0 +1,108 @@
+@import '@styles/global.scss';
+@import '@styles/variables.scss';
+@import '@styles/animations.scss';
+
+.hero-section {
+    width: 100%;
+    height: auto;
+    padding: 100px 0px;
+    background-image: url('../../../../../assets/images/other/Line\ 3.png');
+    background-size: cover;
+    gap: 50px;
+}
+
+.hero-section-information {
+    width: auto;
+    height: auto;
+    padding-left: 5%;
+    gap: 40px;
+
+    .hero-section-information__title {
+        width: auto;
+
+        h1 {
+            font-size: $titleBig;
+            line-height: auto;
+            color: $colorWhite;
+            text-transform: uppercase;
+        }
+
+        span {
+            background-image: linear-gradient(90deg, $secondaryColor 0%, $primaryColor 100%);
+            background-clip: text;
+            font-size: $titleBig;
+            color: transparent;
+            text-wrap: nowrap;
+        }
+    }
+
+    .hero-section-information__subtitle {
+        width: auto;
+
+        p {
+            font-size: $paragraphLarge;
+            line-height: auto;
+            color: $colorGrey6;
+        }
+    }
+
+    .hero-section-information__action {
+        width: 360px;
+        height: 50px;
+        border: 2px solid $primaryColor;
+        border-radius: 30px;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        padding: 0px 3px;
+        justify-content: space-between;
+
+        .action-controller__input {
+            width: 100%;
+            height: 40px;
+            appearance: none;
+            outline: none;
+            border: none;
+            border-radius: none;
+            background-color: transparent;
+            padding: 0px 20px;
+            font-weight: 500;
+            font-size: $paragraphMedium;
+            color: $primaryColor;
+            transition: $transitionMedium;
+
+            &::placeholder {
+                color: $colorGrey4;
+            }
+        }
+    }
+
+    .hero-section-information__links {
+        width: auto;
+        height: auto;
+        gap: 16px;
+
+        .links-item {
+
+            &:hover img{
+                transform: scale(1.1);
+            }
+            
+            img {
+                width: 40px;
+                height: 40px;
+                transition: $transitionMedium;
+            }
+        }
+    }
+}
+
+.hero-section-visualization {
+    width: auto;
+    height: auto;
+    padding-right: 5%;
+    gap: 30px;
+
+    .hero-section-visualization__image {
+        
+    }
+}

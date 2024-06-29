@@ -1,0 +1,53 @@
+<div class="hero-section flex-row">
+    <div class="hero-section-information flex-column">
+        <div #title class="hero-section-information__title" [style.visibility]="titleAnimationLoading ? 'hidden' : 'visible'">
+            <h1 class="font-montserrat">Empower Your Crypto<br>Transactions with<br><span class="font-bruno-ace-sc">Tonkeeper Battery</span></h1>
+        </div>
+
+        <div #subtitle class="hero-section-information__subtitle" [style.visibility]="subtitleAnimationLoading ? 'hidden' : 'visible'">
+            <p class="font-montserrat">Experience seamless, gas-free transactions and enjoy the convenience of crypto without the hassle of gas fees.</p>
+        </div>
+
+        <div #actionGetStarted class="hero-section-information__action flex-row flex-align-center" [style.visibility]="actionAnimationLoading ? 'hidden' : 'visible'">
+            <div class="action-controller">
+                <input type="email" autocomplete="off" class="action-controller__input"
+                    [id]="'email'"
+                    [name]="'email'"
+                    [placeholder]="'Enter your email'"
+                >
+            </div>
+
+            <div class="action-controller action-button">
+                <ui-button
+                    [elementID]="'get-started'"
+                    [elementName]="'get-started'"
+                    [elementLabel]="'Get started'"
+                    [elementType]="'primary'"
+                ></ui-button>
+            </div>
+        </div>
+
+        <div #links class="hero-section-information__links flex-row" [style.visibility]="linksAnimationLoading ? 'hidden' : 'visible'">
+            <a href="" class="links-item">
+                <img src="assets/images/icons/apple-icon.svg" alt="Apple icon">
+            </a>
+
+            <a href="" class="links-item">
+                <img src="assets/images/icons/android-icon.svg" alt="Android icon">
+            </a>
+
+            <a href="" class="links-item">
+                <img src="assets/images/icons/windows-icon.svg" alt="Windows icon">
+            </a>
+
+            <a href="" class="links-item">
+                <img src="assets/images/icons/telegram-icon.svg" alt="telegram icon">
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-section-visualization">
+        <div class="hero-section-visualization__image">
+        </div>
+    </div>
+</div>

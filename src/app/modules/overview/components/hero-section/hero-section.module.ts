@@ -1,21 +1,20 @@
 import { NgModule } from "@angular/core";
-import { HeaderComponent } from "./header.component";
+import { HeroSectionComponent } from "./hero-section.component";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { ButtonModule } from "@shared/components/material-ui/button/button.module";
 
 @NgModule({
     declarations: [
-        HeaderComponent,
+        HeroSectionComponent,
     ],
     imports: [
         CommonModule,
         FormsModule,
-        // Components
         ButtonModule,
     ],
     exports: [
-        HeaderComponent,
+        HeroSectionComponent,
     ],
 })
-export class HeaderModule {}
+export class HeroSectionModule {}
