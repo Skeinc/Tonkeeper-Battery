@@ -1,0 +1,27 @@
+<section id="benefits" class="benefits-wrapper">
+    <div class="benefits flex-column">
+        <header class="benefits-header">
+            <h3 class="benefits-header__title font-bruno-ace-sc">Benefits</h3>
+        </header>
+
+        <div class="benefits-container flex-row">
+            <div *ngFor="let benefit of benefitsData" class="benefits-item flex-column">
+                <div class="benefits-item__title flex-row">
+                    <h4 class="font-bruno-ace-sc">{{ benefit.title }}</h4>
+                </div>
+
+                <div class="benefits-item__image flex-row">
+                    <img ngOptimizedImage [src]="'assets/images/icons/' + benefit.image" alt="Benefit icon">
+                </div>
+
+                <div class="benefits-item__description flex-row">
+                    <p class="font-montserrat">{{ benefit.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img ngOptimizedImage class="benefits-wrapper__background" src="assets/images/other/abstrac-figure.png" alt="Figure background">
+
+    <div class="circle-background"></div>
+</section>

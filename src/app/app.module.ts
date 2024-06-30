@@ -6,7 +6,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
-import { ApplicationModule } from "@modules/application/application.module";
 import { OverviewModule } from "@modules/overview/overview.module";
 
 @NgModule({
@@ -21,7 +20,6 @@ import { OverviewModule } from "@modules/overview/overview.module";
         HttpClientModule,
         // Modules
         AppRoutingModule,
-        ApplicationModule,
         OverviewModule,
     ],
     bootstrap: [

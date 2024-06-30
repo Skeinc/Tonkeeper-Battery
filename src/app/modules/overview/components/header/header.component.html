@@ -8,23 +8,23 @@
         <!-- Actions -->
         <div class="header-actions flex-row flex-align-center">
             <div class="header-action">
-                <p class="header-action__link font-montserrat">Home</p>
+                <a appSmoothScroll="#home" class="header-action__link font-montserrat">Home</a>
             </div>
 
             <div class="header-action">
-                <p class="header-action__link font-montserrat">About us</p>
+                <a appSmoothScroll="#about" class="header-action__link font-montserrat">About us</a>
             </div>
 
             <div class="header-action">
-                <p class="header-action__link font-montserrat">Benefits</p>
+                <a appSmoothScroll="#benefits" class="header-action__link font-montserrat">Benefits</a>
             </div>
 
             <div class="header-action">
-                <p class="header-action__link font-montserrat">Features</p>
+                <a appSmoothScroll="#features" class="header-action__link font-montserrat">Features</a>
             </div>
 
             <div class="header-action">
-                <p class="header-action__link font-montserrat">Contact</p>
+                <a appSmoothScroll="#faq" class="header-action__link font-montserrat">FAQ</a>
             </div>
 
             <ui-button
@@ -33,6 +33,43 @@
                 [elementLabel]="'Sign up'"
                 [elementType]="'secondary'"
             ></ui-button>
+        </div>
+
+        <button type="button" class="header-toggle flex-center-center" (click)="toggleOverlayVisible()">
+            <span class="material-icons-round">menu</span>
+        </button>
+    </div>
+
+    <div class="header-overlay flex-column" [@expandCollapse]="isOverlayVisible ? 'expanded' : 'collapsed'">
+        <div class="header-overlay__actions flex-column">
+            <div class="action">
+                <a appSmoothScroll="#home" class="action-link font-montserrat">Home</a>
+            </div>
+
+            <div class="action">
+                <a appSmoothScroll="#about" class="action-link font-montserrat">About us</a>
+            </div>
+
+            <div class="action">
+                <a appSmoothScroll="#benefits" class="action-link font-montserrat">Benefits</a>
+            </div>
+
+            <div class="action">
+                <a appSmoothScroll="#features" class="action-link font-montserrat">Features</a>
+            </div>
+
+            <div class="action">
+                <a appSmoothScroll="#faq" class="action-link font-montserrat">FAQ</a>
+            </div>
+
+            <div class="action-wrapper">
+                <ui-button
+                    [elementID]="'signup'"
+                    [elementName]="'signup'"
+                    [elementLabel]="'Sign up'"
+                    [elementType]="'secondary'"
+                ></ui-button>
+            </div>
         </div>
     </div>
 </header>

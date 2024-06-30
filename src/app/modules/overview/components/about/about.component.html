@@ -1,0 +1,62 @@
+<section id="about" class="about flex-column">
+    <div class="about-header flex-column">
+        <h2 class="about-header__title font-bruno-ace-sc">What is Tonkeeper Battery?</h2>
+    </div>
+
+    <div class="about-container flex-row">
+        <div class="about-information flex-column">
+            <p class="about-information__text font-montserrat">Welcome to Tonkeeper Battery, your gateway to seamless and gas-free cryptocurrency transactions. Our mission is to simplify the crypto experience for everyone by eliminating the need for complex and costly gas fees. With Tonkeeper Battery, you can now easily manage your digital assets without worrying about blockchain transaction fees.</p>
+
+            <p class="about-information__text font-montserrat">Tonkeeper Battery is currently available in open beta on all mobile platforms, offering a revolutionary way for new users to start using stablecoins, NFTs, and other tokens immediately. No more hassle of registering on exchanges or navigating through complicated procedures just to pay for gas.</p>
+        </div>
+
+        <div class="about-chart flex-column">
+            <div class="about-chart__information flex-column">
+                <header class="information-title">
+                    <h3 class="information-title__text font-bruno-ace-sc">Tonkeeper battery users</h3>
+                </header>
+
+                <div class="information-chart">
+                    <p-chart [type]="'line'" [options]="dashboardUsersOptions" [data]="dashboardUsersData"></p-chart>
+                </div>
+    
+
+                <div class="information-statistic flex-row">
+                    <div class="information-statistic__item flex-column">
+                        <p class="item-caption">New users</p>
+
+                        <p class="item-value">{{ tonkeeperBatteryUsersData.newUsers ?? 0 }}</p>
+                    </div>
+
+                    <div class="information-statistic__item flex-column">
+                        <p class="item-caption">All users</p>
+
+                        <p class="item-value">{{ tonkeeperBatteryUsersData.users ?? 0 }}</p>
+                    </div>
+
+                    <div class="information-statistic__item flex-column">
+                        <p class="item-caption">Dynamic</p>
+
+                        <p class="item-value">{{ tonkeeperBatteryUsersData.dynamics + '%' }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-header flex-column">
+        <h2 class="about-header__title font-bruno-ace-sc">How it works?</h2>
+    </div>
+
+    <div class="about-container flex-row">
+        <div class="about-image flex-row">
+            <img ngOptimizedImage src="assets/images/other/toncoin-horizontal.png" alt="Toncoin icon">
+        </div>
+
+        <div class="about-information flex-column">
+            <p class="about-information__text font-montserrat">Tonkeeper Battery automatically covers blockchain fees, allowing you to pay with tokens (stablecoins, NFTs, etc.) without purchasing TONs for gas. Charge your battery using in-app payments on iOS or with TONs or stablecoins. Simply send a few dollars in stablecoins or TONs to the special address battery.ton, and your wallet will be charged.</p>
+
+            <p class="about-information__text font-montserrat">Each charge covers the fee for a simple TON transfer. More complex transactions may require multiple charges. The battery is measured in charges that cover those network fees. For example, token swaps require ~50 charges, token transfers ~10 charges, and NFT transfers ~4 charges.</p>
+        </div>
+    </div>
+</section>

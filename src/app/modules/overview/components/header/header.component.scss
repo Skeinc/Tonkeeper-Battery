@@ -5,6 +5,10 @@
     width: 100%;
     height: 80px;
     padding: 0px 5%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 7;
 }
 
 .header-container {
@@ -12,6 +16,7 @@
     height: 100%;
     justify-content: space-between;
     border-bottom: 1px solid $colorDark4;
+    backdrop-filter: blur(5px);
     gap: 20px;
 }
 
@@ -25,6 +30,7 @@
         font-size: $titleShort;
         color: transparent;
         text-wrap: nowrap;
+        transition: $transitionMedium;
     }
 }
 
@@ -34,7 +40,6 @@
     gap: 10px;
 
     .header-action {
-        padding: 0px 10px;
         cursor: pointer;
 
         &:hover {
@@ -52,11 +57,105 @@
         }
 
         .header-action__link {
+            padding: 5px 10px;
             font-weight: 500;
             font-size: $paragraphMedium;
-            color: $colorGrey1;
+            color: $colorGrey4;
             text-wrap: nowrap;
             transition: $transitionMedium;
+        }
+    }
+}
+
+.header-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    appearance: none;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: $transitionMedium;
+
+    &:hover {
+        border: 1px solid $primaryColor;
+        background: linear-gradient(90deg, rgba(25, 249, 195, 0.3) 0%, rgba(41, 217, 59, 0.3) 100%);
+    }
+
+    span {
+        margin-top: 3px;
+        color: $colorWhite;
+        transition: $transitionMedium;
+    }
+}
+
+.header-overlay {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    display: none;
+    backdrop-filter: blur(5px);
+
+    .header-overlay__actions {
+        width: 100%;
+        height: auto;
+        align-items: center;
+        gap: 10px;
+
+        .action {
+            cursor: pointer;
+    
+            &:hover {
+                .action-link {
+                    color: $colorWhite;
+                }
+            }
+    
+            .action-link {
+                padding: 10px 0px;
+                font-weight: 500;
+                font-size: $paragraphMedium;
+                color: $colorGrey4;
+                text-wrap: nowrap;
+                transition: $transitionMedium;
+            }
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .header-brand {
+        .header-brand__title {
+            font-size: $paragraphLarge;
+        }
+    }
+
+    .header-actions {
+        .header-action {
+            .header-action__link {
+                font-size: $paragraphSmall;
+            }
+        }
+    }
+}
+
+@media (max-width: 1068px) {
+    .header-actions {
+        display: none;
+    }
+
+    .header-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-brand {
+        .header-brand__title {
+            font-size: $paragraphBig;
         }
     }
 }

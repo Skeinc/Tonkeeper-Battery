@@ -1,0 +1,31 @@
+<section id="faq" class="faq-wrapper">
+    <div class="faq flex-column">
+        <header class="faq-header">
+            <h3 class="faq-header__title font-bruno-ace-sc">FAQ</h3>
+        </header>
+
+        <div class="faq-container flex-column">
+            <div class="faq-list flex-column">
+                <div *ngFor="let item of FAQData; index as i" class="faq-item column" (click)="toggleAnswerFlagVisible(i)">
+                    <div class="faq-question flex-row flex-align-center">
+                        <p class="faq-question__value font-bruno-ace-sc">{{ item.question }}</p>
+
+                        <button type="button" class="faq-question__button flex-center-center">
+                            <span class="material-icons" [style.transform]="answersFlagsVisible[i] ? 'rotate(180deg)' : 'rotate(0deg)'">expand_more</span>
+                        </button>
+                    </div>
+
+                    <div class="faq-answer flex-column" [@expandCollapse]="answersFlagsVisible[i] ? 'expanded' : 'collapsed'">
+                        <p class="faq-answer__value font-montserrat">{{ item.answer }}</p>
+
+                        <div class="faq-answer__border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img ngOptimizedImage class="faq-wrapper__background" src="assets/images/other/lines-background.png" alt="Lines background">
+
+    <div class="circle-background"></div>
+</section>

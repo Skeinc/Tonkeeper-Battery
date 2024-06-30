@@ -14,11 +14,13 @@ export class HeroSectionComponent implements OnInit{
     @ViewChild('subtitle') subtitle?: ElementRef;
     @ViewChild('actionGetStarted') action?: ElementRef;
     @ViewChild('links') links?: ElementRef;
+    @ViewChild('image') image?: ElementRef;
 
     public titleAnimationLoading: boolean = true;
     public subtitleAnimationLoading: boolean = true;
     public actionAnimationLoading: boolean = true;
     public linksAnimationLoading: boolean = true;
+    public imageAnimationLoading: boolean = true;
 
     ngOnInit(): void {
         this.activateAnimation();
@@ -27,7 +29,7 @@ export class HeroSectionComponent implements OnInit{
     private activateAnimation(): void {
         setTimeout(() => {
             if(this.title) {
-                this.title.nativeElement.style.animation = "slideRight 0.75s ease-in-out";
+                this.title.nativeElement.style.animation = "slideRight 1s ease-in-out";
                 this.titleAnimationLoading = false;
 
                 this.cdr.markForCheck();
@@ -35,8 +37,17 @@ export class HeroSectionComponent implements OnInit{
         }, 0);
 
         setTimeout(() => {
+            if(this.image) {
+                this.image.nativeElement.style.animation = "slideLeft 1s ease-in-out";
+                this.imageAnimationLoading = false;
+
+                this.cdr.markForCheck();
+            };
+        }, 0);
+
+        setTimeout(() => {
             if(this.subtitle) {
-                this.subtitle.nativeElement.style.animation = "slideRight 0.75s ease-in-out";
+                this.subtitle.nativeElement.style.animation = "slideRight 1s ease-in-out";
                 this.subtitleAnimationLoading = false;
 
                 this.cdr.markForCheck();
@@ -45,7 +56,7 @@ export class HeroSectionComponent implements OnInit{
 
         setTimeout(() => {
             if(this.action) {
-                this.action.nativeElement.style.animation = "slideRight 0.75s ease-in-out";
+                this.action.nativeElement.style.animation = "slideRight 1s ease-in-out";
                 this.actionAnimationLoading = false;
 
                 this.cdr.markForCheck();
@@ -54,7 +65,7 @@ export class HeroSectionComponent implements OnInit{
 
         setTimeout(() => {
             if(this.links) {
-                this.links.nativeElement.style.animation = "slideRight 0.75s ease-in-out";
+                this.links.nativeElement.style.animation = "slideRight 1s ease-in-out";
                 this.linksAnimationLoading = false;
 
                 this.cdr.markForCheck();

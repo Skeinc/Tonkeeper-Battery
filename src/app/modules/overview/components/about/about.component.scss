@@ -1,0 +1,330 @@
+@import '@styles/global.scss';
+@import '@styles/variables.scss';
+
+.about {
+    width: 100%;
+    height: auto;
+    position: relative;
+    gap: 50px;
+}
+
+.about-header {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    z-index: 4;
+
+    .about-header__title {
+        background-image: linear-gradient(90deg, $secondaryColor 0%, $primaryColor 100%);
+        background-clip: text;
+        font-size: $titleSmall;
+        color: transparent;
+        text-transform: uppercase;
+        text-align: center;
+        transition: $transitionMedium;
+    }
+}
+
+.about-container {
+    width: 100%;
+    height: auto;
+    gap: 40px;
+    padding: 0px 5%;
+    align-items: center;
+    z-index: 4;
+}
+
+.about-information {
+    width: 50%;
+    height: auto;
+    gap: 20px;
+
+    .about-information__text {
+        font-weight: 500;
+        font-size: $paragraphLarge;
+        line-height: $titleSmall;
+        letter-spacing: 1px;
+        color: $colorWhite;
+        text-align: justify;
+    }
+}
+
+.about-chart {
+    width: 50%;
+    height: auto;
+    position: relative;
+    border: 2px solid $primaryColor;
+    border-radius: 30px;
+    background: linear-gradient(90deg, rgba(25, 249, 195, 0.3) 0%, rgba(41, 217, 59, 0.3) 100%);
+    backdrop-filter: blur(5px);
+    padding: 25px 30px;
+    overflow: hidden;
+
+    .about-chart__information {
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+
+        .information-title {
+            width: 100%;
+            height: auto;
+
+            .information-title__text {
+                font-size: $paragraphBig;
+                color: $colorGrey4;
+                text-wrap: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+
+        .information-chart {
+            width: 100%;
+            height: auto;
+
+            &::ng-deep {
+                canvas {
+                    width: 100%;
+                    height: 300px;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        .information-statistic {
+            width: 100%;
+            height: auto;
+            gap: 16px;
+            justify-content: space-between;
+
+            .information-statistic__item {
+                width: 33%;
+                height: auto;
+                border: none;
+                border-radius: 10px;
+                background: linear-gradient(90deg, $secondaryColor 0%, $primaryColor 100%);
+                padding: 6px 10px;
+                gap: 2px;
+                overflow: hidden;
+
+                .item-caption {
+                    font-weight: 600;
+                    font-size: 10px;
+                    color: $colorWhite;
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+
+                .item-value {
+                    font-weight: 600;
+                    font-size: $paragraphLarge;
+                    color: $colorWhite;
+                    letter-spacing: 0.5px;
+                    text-wrap: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+.about-image {
+    width: 50%;
+    height: auto;
+    justify-content: center;
+
+    &:hover img{
+        transform: scale(1.05) translateY(-20px) rotateX(20deg);
+    }
+
+    img {
+        width: 500px;
+        height: auto;
+        cursor: pointer;
+        transition: $transitionMedium;
+    }
+}
+
+@media (max-width: 1440px) {
+    .about-header {
+    
+        .about-header__title {
+            font-size: $titleShort;
+        }
+    }
+    
+    .about-container {
+        gap: 30px;
+    }
+    
+    .about-information {
+        .about-information__text {
+            font-size: $paragraphBig;
+            line-height: $titleShort;
+            letter-spacing: 0.8px;
+        }
+    }
+    
+    .about-chart {
+        padding: 15px 20px;
+    
+        .about-chart__information {
+            .information-title {
+                .information-title__text {
+                    font-size: $paragraphMedium;
+                }
+            }
+    
+            .information-chart {
+                &::ng-deep {
+                    canvas {
+                        height: 250px;
+                    }
+                }
+            }
+    
+            .information-statistic {
+                gap: 12px;
+    
+                .information-statistic__item {
+                    width: 33%;
+    
+                    .item-caption {
+                        font-size: 8px;
+                    }
+    
+                    .item-value {
+                        font-size: $paragraphBig;
+                    }
+                }
+            }
+        }
+    }
+    
+    .about-image {
+        img {
+            width: 400px;
+        }
+    }
+}
+
+@media (max-width: 1068px) {
+    .about {
+        gap: 40px;
+    }
+    
+    .about-container {
+        flex-direction: column;
+    }
+    
+    .about-information {
+        width: 100%;
+    }
+    
+    .about-chart {
+        width: 100%;
+    }
+    
+    .about-image {
+        width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    .about-header {
+        .about-header__title {
+            font-size: $paragraphLarge;
+        }
+    }
+    
+    .about-container {
+        gap: 20px;
+    }
+    
+    .about-information {
+        .about-information__text {
+            font-size: $paragraphMedium;
+            line-height: $paragraphLarge;
+            letter-spacing: 0.5px;
+        }
+    }
+    
+    .about-chart {
+        .about-chart__information {
+            .information-chart {
+                &::ng-deep {
+                    canvas {
+                        height: 200px;
+                    }
+                }
+            }
+    
+            .information-statistic {
+                .information-statistic__item {
+                    .item-value {
+                        font-size: $paragraphMedium;
+                    }
+                }
+            }
+        }
+    }
+    
+    .about-image {
+        img {
+            width: 360px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .about-header {
+        .about-header__title {
+            font-size: $paragraphBig;
+        }
+    }
+    
+    .about-container {
+        gap: 20px;
+    }
+    
+    .about-information {
+        .about-information__text {
+            font-size: $paragraphSmall;
+            line-height: $paragraphBig;
+        }
+    }
+    
+    .about-chart {
+        .about-chart__information {
+            .information-title {
+                .information-title__text {
+                    font-size: $paragraphSmall;
+                }
+            }
+
+            .information-chart {
+                &::ng-deep {
+                    canvas {
+                        height: 150px;
+                    }
+                }
+            }
+    
+            .information-statistic {
+                .information-statistic__item {
+                    .item-value {
+                        font-size: $paragraphSmall;
+                    }
+                }
+            }
+        }
+    }
+    
+    .about-image {
+        img {
+            width: 250px;
+        }
+    }
+}

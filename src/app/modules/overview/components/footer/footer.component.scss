@@ -1,0 +1,104 @@
+@import '@styles/global.scss';
+@import '@styles/variables.scss';
+
+.footer-wrapper {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 0px 5%;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    padding: 50px 0px;
+    position: relative;
+    border-top: 1px solid $colorDark4;
+    z-index: 5;
+
+    .footer-items {
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        gap: 20px;
+
+        .footer-items__links {
+            width: auto;
+            height: auto;
+            gap: 16px;
+
+            a {
+                font-size: $paragraphSmall;
+                color: $colorGrey4;
+                letter-spacing: 0.5px;
+                transition: $transitionMedium;
+
+                &:hover {
+                    color: $colorWhite;
+                }
+            }
+        }
+
+        .footer-items__image {
+            width: auto;
+            height: auto;
+
+            img {
+                width: 130px;
+                height: auto;
+                opacity: 0.8;
+            }
+        }
+
+        .footer-items__copyright {
+            width: auto;
+            height: auto;
+
+            p {
+                font-size: $paragraphSmall;
+                color: $colorGrey4;
+                letter-spacing: 0.5px;
+                transition: $transitionMedium;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1068px) {
+    .footer-items {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .footer {
+        .footer-items {
+            .footer-items__links {
+                width: auto;
+                height: auto;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+    
+                a {
+                    font-size: $paragraphSmall;
+                }
+            }
+    
+            .footer-items__image {
+                img {
+                    width: 100px;
+                }
+            }
+    
+            .footer-items__copyright {
+    
+                p {
+                    font-size: $paragraphSmall;
+                }
+            }
+        }
+    }
+}

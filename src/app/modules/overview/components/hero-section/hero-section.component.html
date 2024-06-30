@@ -1,53 +1,72 @@
-<div class="hero-section flex-row">
-    <div class="hero-section-information flex-column">
-        <div #title class="hero-section-information__title" [style.visibility]="titleAnimationLoading ? 'hidden' : 'visible'">
-            <h1 class="font-montserrat">Empower Your Crypto<br>Transactions with<br><span class="font-bruno-ace-sc">Tonkeeper Battery</span></h1>
-        </div>
-
-        <div #subtitle class="hero-section-information__subtitle" [style.visibility]="subtitleAnimationLoading ? 'hidden' : 'visible'">
-            <p class="font-montserrat">Experience seamless, gas-free transactions and enjoy the convenience of crypto without the hassle of gas fees.</p>
-        </div>
-
-        <div #actionGetStarted class="hero-section-information__action flex-row flex-align-center" [style.visibility]="actionAnimationLoading ? 'hidden' : 'visible'">
-            <div class="action-controller">
-                <input type="email" autocomplete="off" class="action-controller__input"
-                    [id]="'email'"
-                    [name]="'email'"
-                    [placeholder]="'Enter your email'"
-                >
+<section id="home" class="hero-section-wrapper">
+    <div class="hero-section flex-column">
+        <div class="hero-section-container flex-row">
+            <div class="hero-section-information flex-column">
+                <div #title class="hero-section-information__title" [style.visibility]="titleAnimationLoading ? 'hidden' : 'visible'">
+                    <h1 class="font-montserrat">Empower Your Crypto Transactions with <span class="font-bruno-ace-sc">Tonkeeper Battery</span></h1>
+                </div>
+        
+                <div #subtitle class="hero-section-information__subtitle" [style.visibility]="subtitleAnimationLoading ? 'hidden' : 'visible'">
+                    <p class="font-montserrat">Experience seamless, gas-free transactions and enjoy the convenience of crypto without the hassle of gas fees.</p>
+                </div>
+        
+                <div #actionGetStarted class="hero-section-information__action flex-row flex-align-center" [style.visibility]="actionAnimationLoading ? 'hidden' : 'visible'">
+                    <div class="action-controller">
+                        <input type="email" autocomplete="off" class="action-controller__input"
+                            [id]="'email'"
+                            [name]="'email'"
+                            [placeholder]="'Enter your email'"
+                        >
+                    </div>
+        
+                    <div class="action-controller action-button">
+                        <ui-button
+                            [elementID]="'get-started'"
+                            [elementName]="'get-started'"
+                            [elementLabel]="'Get started'"
+                            [elementType]="'primary'"
+                        ></ui-button>
+                    </div>
+                </div>
+        
+                <div #links class="hero-section-information__links flex-row" [style.visibility]="linksAnimationLoading ? 'hidden' : 'visible'">
+                    <a href="https://apps.apple.com/us/app/tonkeeper/id1587742107" target="_blank" class="links-item">
+                        <img ngOptimizedImage src="assets/images/icons/apple-icon.svg" alt="Apple icon">
+                    </a>
+        
+                    <a href="https://play.google.com/store/apps/details?id=com.ton_keeper" target="_blank" class="links-item">
+                        <img ngOptimizedImage src="assets/images/icons/android-icon.svg" alt="Android icon">
+                    </a>
+        
+                    <a href="https://tonkeeper.com/pro" target="_blank" class="links-item">
+                        <img ngOptimizedImage src="assets/images/icons/windows-icon.svg" alt="Windows icon">
+                    </a>
+        
+                    <a href="https://t.me/tonkeeper" target="_blank" class="links-item">
+                        <img ngOptimizedImage src="assets/images/icons/telegram-icon.svg" alt="telegram icon">
+                    </a>
+                </div>
             </div>
-
-            <div class="action-controller action-button">
-                <ui-button
-                    [elementID]="'get-started'"
-                    [elementName]="'get-started'"
-                    [elementLabel]="'Get started'"
-                    [elementType]="'primary'"
-                ></ui-button>
+        
+            <div class="hero-section-visualization flex-row">
+                <div #image class="hero-section-visualization__image">
+                    <img ngOptimizedImage src="assets/images/other/toncoin-3d.png" alt="Toncoin icon">
+                </div>
             </div>
         </div>
 
-        <div #links class="hero-section-information__links flex-row" [style.visibility]="linksAnimationLoading ? 'hidden' : 'visible'">
-            <a href="" class="links-item">
-                <img src="assets/images/icons/apple-icon.svg" alt="Apple icon">
-            </a>
+        <div class="hero-section-action flex-center-center">
+            <button appSmoothScroll="#about" type="button" class="hero-section-action__button flex-center-center">
+                <img ngOptimizedImage src="assets/images/icons/mouse-icon.svg" alt="Mouse icon">
 
-            <a href="" class="links-item">
-                <img src="assets/images/icons/android-icon.svg" alt="Android icon">
-            </a>
+                <span class="font-bruno-ace">Scroll down</span>
 
-            <a href="" class="links-item">
-                <img src="assets/images/icons/windows-icon.svg" alt="Windows icon">
-            </a>
+                <img ngOptimizedImage src="assets/images/icons/arrow-down-icon.svg" alt="Arrow down icon">
+            </button>
 
-            <a href="" class="links-item">
-                <img src="assets/images/icons/telegram-icon.svg" alt="telegram icon">
-            </a>
+            <div class="circle-background"></div>
         </div>
     </div>
 
-    <div class="hero-section-visualization">
-        <div class="hero-section-visualization__image">
-        </div>
-    </div>
-</div>
+    <img ngOptimizedImage class="hero-section-wrapper__background" src="assets/images/other/lines-background.png" alt="Lines background">
+</section>

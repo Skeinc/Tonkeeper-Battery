@@ -1,27 +1,63 @@
-# TonkeeperBattery
+# Tonkeeper Battery
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+### Описание проекта
 
-## Development server
+**Tonkeeper Battery** — это инновационное решение, предназначенное для упрощения взаимодействия с криптовалютами. Проект предлагает пользователям возможность совершать транзакции без газовых комиссий, что делает использование криптовалюты удобным и доступным. С помощью Tonkeeper Battery вы можете получать стейблкоины или NFT и сразу начинать их использовать, без необходимости использования TON для оплаты газа. Батарейка автоматически оплачивает комиссии за вас.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Основные функции:
 
-## Code scaffolding
+- **Безопасность:**
+    Защищенные транзакции с использованием передовых технологий шифрования;
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Простота использования:**
+    Интуитивно понятный интерфейс для пользователей любого уровня;
 
-## Build
+- **Безгазовые транзакции:** 
+    Транзакции без необходимости оплаты газовых комиссий;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Удобство пополнения:**
+    Пополнение батарейки с помощью банковской карты или стейблкоинов.
 
-## Running unit tests
+### Запуск проекта
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Установка зависимостей:
 
-## Running end-to-end tests
+Убедитесь, что у вас установлен Node.js и npm. Если нет, скачайте и установите их с официального сайта Node.js.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Склонируйте репозиторий проекта и установите все необходимые зависимости:
 
-## Further help
+```
+https://github.com/Skeinc/Tonkeeper-Battery.git
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+cd tonkeeper-battery
+
+npm install
+```
+
+2. Запуск проекта:
+
+Для запуска проекта выполните в терминале следующую команду:
+
+```
+ng serve
+```
+
+Это запустит локальный сервер, обычно доступный по адресу http://localhost:4200.
+
+### Используемый стек технологий
+
+- **Angular:** Фреймворк для построения одностраничных приложений;
+- **TypeScript:** Язык программирования, добавляющий строгую типизацию к JavaScript;
+- **SCSS:** Препроцессор CSS для удобного написания стилей;
+- **HTML5:** Стандартный язык разметки для создания веб-страниц;
+- **PrimeNG:** Библиотека компонентов пользовательского интерфейса для Angular (Использовалась только для Chart JS);
+- **Chart.js:** Библиотека для создания интерактивных графиков и диаграмм;
+- **TinyPNG:** Инструмент для сжатия изображений, что помогает оптимизировать производительность сайта;
+- **Vercel:** Платформа для деплоя фронтенда.
+
+### Контакты
+
+Если у вас возникли вопросы или проблемы, пожалуйста, свяжитесь со мной по следующим данным:
+
+- **Email:** skezydeveloper@gmail.com
+- **Telegram:** @Ske3y

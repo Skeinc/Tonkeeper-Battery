@@ -1,0 +1,224 @@
+@import '@styles/global.scss';
+@import '@styles/variables.scss';
+
+.benefits-wrapper {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 100px 0px;
+}
+
+.benefits-wrapper__background {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 500px;
+    height: auto;
+    opacity: 0.5;
+    filter: blur(5px);
+    z-index: 3;
+    transition: $transitionMedium;
+}
+
+.circle-background {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: $primaryColor;
+    filter: blur(150px);
+    opacity: 0.5;
+    z-index: 3;
+    transition: $transitionMedium;
+}
+
+.benefits {
+    width: 100%;
+    height: auto;
+    position: relative;
+    gap: 50px;
+    z-index: 4;
+}
+
+.benefits-header {
+    width: 100%;
+    height: auto;
+    align-items: center;
+
+    .benefits-header__title {
+        background-image: linear-gradient(90deg, $secondaryColor 0%, $primaryColor 100%);
+        background-clip: text;
+        font-size: $titleSmall;
+        color: transparent;
+        text-transform: uppercase;
+        text-align: center;
+        transition: $transitionMedium;
+    }
+}
+
+.benefits-container {
+    width: 100%;
+    height: auto;
+    gap: 40px;
+    padding: 0px 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefits-item {
+    width: 300px;
+    height: 450px;
+    border: 1px solid $primaryColor;
+    border-radius: 20px 0px 20px 0px;
+    background-color: $colorDark3;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    gap: 10px;
+    justify-content: space-between;
+    overflow: hidden;
+    cursor: pointer;
+    transition: $transitionMedium;
+
+    &:hover {
+        transform: translate(10px, -10px);
+    }
+
+    .benefits-item__title {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+
+        h4 {
+            font-size: $paragraphLarge;
+            color: $colorWhite;
+            text-align: center;
+        }
+    }
+
+    .benefits-item__image {
+        width: 100%;
+        height: auto;
+        justify-content: center;
+
+        img {
+            width: auto;
+            height: 150px;
+        }
+    }
+
+    .benefits-item__description {
+        width: 100%;
+        height: auto;
+
+        p {
+            font-size: $paragraphSmall;
+            line-height: $paragraphBig;
+            color: $colorGrey6;
+            letter-spacing: 0.8px;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .benefits-wrapper {
+        padding: 80px 0px;
+    }
+
+    .benefits-wrapper__background {
+        width: 300px;
+    }
+    
+    .benefits {
+        gap: 40px;
+    }
+    
+    .benefits-header {
+        .benefits-header__title {
+            font-size: $titleShort;
+        }
+    }
+    
+    .benefits-container {
+        gap: 30px;
+    }
+    
+    .benefits-item {
+        width: 250px;
+        height: 400px;
+    
+        .benefits-item__title {
+            h4 {
+                font-size: $paragraphBig;
+            }
+        }
+    
+        .benefits-item__image {
+            img {
+                height: 100px;
+            }
+        }
+    
+        .benefits-item__description {
+            p {
+                font-size: $paragraphShort;
+                line-height: $paragraphMedium;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1068px) {
+    .benefits-wrapper__background {
+        width: 200px;
+    }
+
+    .benefits-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .benefits-header {
+        .benefits-header__title {
+            font-size: $paragraphLarge;
+        }
+    }
+
+    .benefits-item {
+        .benefits-item__description {
+            p {
+                text-align: justify;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .benefits-header {
+        .benefits-header__title {
+            font-size: $paragraphBig;
+        }
+    }
+
+    .benefits-container {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .benefits-item {
+        width: 100%;
+        height: auto;
+        gap: 20px;
+
+        .benefits-item__title {
+            h4 {
+                font-size: $paragraphMedium;
+            }
+        }
+    }
+}
